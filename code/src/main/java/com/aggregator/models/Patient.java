@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Patient {
-    private final String id;
+    private final int id;
     private final String name;
-    private final List<String> exams;
+    private final List<Integer> exams;
 
-    public Patient(String id, String name) {
+    public Patient(int id, String name) {
         this.id = id;
         this.name = name;
         this.exams = new ArrayList<>();
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -22,15 +22,15 @@ public class Patient {
         return name;
     }
 
-    public List<String> getExams() {
+    public List<Integer> getExams() {
         return exams;
     }
 
-    public void addExam(String examId) {
+    public void addExam(int examId) {
         exams.add(examId);
     }
 
-    public void removeExam(String examId) {
+    public void removeExam(int examId) {
         exams.remove(examId);
     }
 }

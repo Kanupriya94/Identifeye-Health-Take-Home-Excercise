@@ -1,19 +1,19 @@
 package com.aggregator.models;
 
 public class Exam {
-    private final String id;
-    private final String patientId;
+    private final int id;
+    private final int patientId;
 
-    public Exam(String id, String patientId) {
+    public Exam(int id, int patientId) {
         this.id = id;
         this.patientId = patientId;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public String getPatientId() {
+    public int getPatientId() {
         return patientId;
     }
 }
