@@ -18,6 +18,14 @@ public class PatientExamManager {
         this.exams = new HashMap<>();
     }
 
+    public Map<Integer, Patient> getPatients() {
+        return patients;
+    }
+
+    public Map<Integer, Exam> getExams() {
+        return exams;
+    }
+
     public static PatientExamManager getInstance() {
         if (instance == null) {
             instance = new PatientExamManager();
@@ -62,5 +70,6 @@ public class PatientExamManager {
             System.out.println("Name: " + patient.getName() + ", Id: " + patient.getId() + ", Exam Count: " + patient.getExams().size());
         }
     }
+
 }
 

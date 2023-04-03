@@ -6,7 +6,7 @@ import java.util.List;
 public class Patient {
     private final int id;
     private final String name;
-    private final List<Integer> exams;
+    private List<Integer> exams;
 
     public Patient(int id, String name) {
         this.id = id;
@@ -30,7 +30,8 @@ public class Patient {
         exams.add(examId);
     }
 
-    public void removeExam(int examId) {
+    public void removeExam(Integer examId) {
+        System.out.println("inside removeExam exam id");
         exams.remove(examId);
     }
 }
