@@ -31,7 +31,6 @@ public class Patient {
     }
 
     public void removeExam(Integer examId) {
-        System.out.println("inside removeExam exam id");
         exams.remove(examId);
     }
 }
