@@ -5,13 +5,27 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 
+/**
+ * The FileManager class reads the file of instructions and performs the corresponding actions on the PatientExamManager.
+ */
 public class FileManager {
+    /**
+     * The path to the file to be read.
+     */
     private final String filePath;
 
+    /**
+     * Constructs a new FileManager object with the given file path.
+     *
+     * @param filePath the path to the file to be read
+     */
     public FileManager(String filePath) {
         this.filePath = filePath;
     }
 
+    /**
+     * Reads the file of instructions and performs the corresponding actions on the PatientExamManager.
+     */
     public void processInstructions() {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -34,7 +48,7 @@ public class FileManager {
                 }
             }
         } catch (IOException e) {
-            System.out.println("An error occurred while reading the file: " + e.getMessage());
+            System.out.println("An error has been occurred while reading the given file: " + e.getMessage() + " Please enter valid file path");
         }
     }
 }

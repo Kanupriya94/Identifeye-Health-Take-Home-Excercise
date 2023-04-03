@@ -20,7 +20,7 @@ public class PatientExamManagerTest {
 
     @Test
     public void testProcessInstructions() {
-        FileManager fileManager = new FileManager("/Users/kanupriyaagrawal/workspace/OA/Identifeye-Health-Take-Home-Excercise/input.txt");
+        FileManager fileManager = new FileManager(getClass().getResource("/input.txt").getPath());
         fileManager.processInstructions();
 
         // Test patient count
